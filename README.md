@@ -24,6 +24,29 @@ A análise foi desenvolvida utilizando **SQL para exploração e tratamento de d
 
 ---
 
+## 🧩 Modelo de Dados
+
+O modelo de dados foi estruturado no Power BI com base nas entidades de reservas, ofertas, clientes, operadores e práticas sustentáveis, permitindo a análise de receita, comportamento de clientes, avaliações e adoção de práticas sustentáveis.
+
+Principais tabelas do modelo:
+
+- **reservas** — registros das reservas realizadas na plataforma  
+- **ofertas** — experiências disponíveis para reserva  
+- **clientes** — informações dos clientes  
+- **operadores** — empresas responsáveis pelas ofertas  
+- **avaliacoes** — avaliações feitas pelos clientes  
+- **praticas_sustentaveis** — práticas ambientais adotadas  
+- **oferta_pratica** — tabela ponte entre ofertas e práticas sustentáveis  
+- **atividades** — informações específicas das ofertas do tipo atividade  
+- **hospedagens** — informações específicas das ofertas do tipo hospedagem  
+- **calendario** — suporte para análises temporais  
+
+A tabela **reservas** concentra os registros transacionais do processo de reserva, enquanto **ofertas** descreve as experiências disponíveis na plataforma.
+
+![Modelo de Dados](images/modelo_dados.png)
+
+---
+
 ## 📊 Dashboards
 
 O projeto contém dois dashboards principais:
@@ -73,17 +96,18 @@ Explora a relação entre experiência dos clientes e práticas sustentáveis.
 Esta estrutura organiza os principais componentes do projeto: o arquivo do dashboard, as consultas SQL utilizadas na análise e as imagens utilizadas na documentação.
 
 ```text
-projeto-analise-ecoturismo
+projeto-analise-ecoturismo/
 │
 ├── dashboard
-│   └── ecoturismo_dashboard.pbix
-│
-├── images
-│   ├── dashboard_financeiro.png
-│   └── dashboard_experiencia.png
+│ └── ecoturismo_dashboard.pbix
 │
 ├── sql
-│   └── consultas_ecoturismo.sql
+│ └── analise_ecoturismo.sql
+│
+├── images
+│ ├── dashboard_financeiro.png
+│ ├── dashboard_sustentabilidade.png
+│ └── modelo_dados.png
 │
 └── README.md
  ```
